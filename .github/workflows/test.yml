@@ -1,0 +1,17 @@
+name: Test
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - run: git clone https://github.com/iden3/circom.git
+      - run: cd circom && cargo build --release && cargo install --path circom
+
+      - run: git submodule update --init --recursive
+      - run: npm install
+      - run: npm test
