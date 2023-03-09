@@ -2,6 +2,9 @@
 
 # Usage
 
+## Update required submodules
+git submodule update --init --recursive
+
 ## Install required packages
 npm install
 
