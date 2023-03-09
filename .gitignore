@@ -1,0 +1,30 @@
+node_modules/
+.nyc_output/
+circom-ecdsa/
+
+## Circom generated files
+verify_js/
+*.ptau
+*.zkey
+*.r1cs
+*.sym
+*.wtns
+
+## File system
+.DS_Store
+desktop.ini
+
+## Editor
+*.swp
+*.swo
+Session.vim
+.cproject
+.idea
+*.iml
+.vscode
+.project
+.favorites.json
+.settings/
+
+# Environment variables file
+.env

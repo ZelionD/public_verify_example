@@ -1,0 +1,39 @@
+{
+  "extends": ["airbnb-base", "plugin:prettier/recommended"],
+  "env": {
+    "es2020": true,
+    "mocha": true,
+    "node": true
+  },
+  "parserOptions": {
+    "ecmaVersion": 2020
+  },
+  "globals": {
+    "BadRequestError": "readonly",
+    "ApiError": "readonly"
+  },
+  "rules": {
+    "no-constant-condition": ["error", { "checkLoops": false }],
+    "new-cap": ["error", { "properties": false, "capIsNew": false }],
+    "no-await-in-loop": 0,
+    "no-console": "error",
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "ForInStatement",
+        "message": "for..in loops iterate over the entire prototype chain, which is virtually never what you want. Use Object.{keys,values,entries}, and iterate over the resulting array."
+      },
+      {
+        "selector": "LabeledStatement",
+        "message": "Labels are a form of GOTO; using them makes code confusing and hard to maintain and understand."
+      },
+      {
+        "selector": "WithStatement",
+        "message": "`with` is disallowed in strict mode because it makes code impossible to predict and optimize."
+      }
+    ],
+    "no-unused-vars": "error",
+    "prefer-destructuring": 0,
+    "prefer-promise-reject-errors": ["error", { "allowEmptyReject": false }]
+  }
+}
