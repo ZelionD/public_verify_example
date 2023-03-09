@@ -11,6 +11,7 @@
   "author": "INC4 Team",
   "license": "ISC",
   "dependencies": {
+    "circom-ecdsa": "./circom-ecdsa",
     "@noble/secp256k1": "^1.7.1",
     "circom_tester": "^0.0.19",
     "commander": "^10.0.0",
