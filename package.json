@@ -4,7 +4,7 @@
   "description": "ECDSA signature verifier",
   "main": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test nyc mocha --max-old-space-size=4000",
+    "test": "NODE_OPTIONS=--max_old_space_size=4000 NODE_ENV=test nyc mocha",
     "lint": "eslint \"{src,bin}/**/*.js\"",
     "prettier": "prettier --write \"{src,test,bin,config}/**/*.{js,json,md,yml}\" \"*.{js,json,md,yml}\""
   },
