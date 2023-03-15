@@ -15,9 +15,11 @@ cd circom && cargo build --release && cargo install --path circom
 # Installation
 
 ## Update required submodules
+
 git submodule update --init --recursive
 
 ## Install required packages
+
 cd circom-ecdsa && npm install && cd .. && npm install
 
 # Preparation
