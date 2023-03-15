@@ -56,9 +56,9 @@ node ./src/index.js --message="%MESSAGE%" --gen-random-wallet --circuit %CIRCUIT
 where:
 
 - `%MESSAGE%`: any message which should be signed and verified
-- `%CIRCUIT_WASM_PATH%`: path to built circuit wasm file
+- `%CIRCUIT_WASM_PATH%`: path to built circuit `.wasm` file
 - `%ZKEY_PATH%`: path to prepared `.zkey` file (could be created during PowersOfTau Ceremony)
-- `%VERIFICATION_KEY_PATH%`: path to exported verification key file in JSON format (should be exported from zkey file)
+- `%VERIFICATION_KEY_PATH%`: path to exported verification key file in JSON format (should be exported from `.zkey` file)
 
 ### Supported command line arguments
 
