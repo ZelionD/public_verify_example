@@ -54,19 +54,20 @@ This example currently supports only Groth16 proving system.
 node ./src/index.js --message="%MESSAGE%" --gen-random-wallet --circuit %CIRCUIT_WASM_PATH% --zkey %ZKEY_PATH% --vkey %VERIFICATION_KEY_PATH%
 
 where:
-`%MESSAGE%` - any message which should be signed and verified
-`%CIRCUIT_WASM_PATH%` - path to built circuit wasm file
-`%ZKEY_PATH%` - path to prepared `.zkey` file (could be created during PowersOfTau Ceremony)
-`%VERIFICATION_KEY_PATH%` - path to exported verification key file in JSON format (should be exported from zkey file)
+
+- `%MESSAGE%`: any message which should be signed and verified
+- `%CIRCUIT_WASM_PATH%`: path to built circuit wasm file
+- `%ZKEY_PATH%`: path to prepared `.zkey` file (could be created during PowersOfTau Ceremony)
+- `%VERIFICATION_KEY_PATH%`: path to exported verification key file in JSON format (should be exported from zkey file)
 
 ### Supported command line arguments
 
-`--message`: provides any text message for signing and verification
-`--gen-random-wallet`: generates etherium wallet randomly to be used later for signing
-`--use-phrase`: creates wallet using provided words phrase
-`--circuit`: path to compiled circuit `.wasm` file (usually located at `./verify_js/` directory)
-`--zkey`: path to prepared `.zkey` file
-`--vkey`: path to exported verification key file (could be exported from `.zkey` file by using `snarkjs`)
+- `--message`: provides any text message for signing and verification
+- `--gen-random-wallet`: generates etherium wallet randomly to be used later for signing
+- `--use-phrase`: creates wallet using provided words phrase
+- `--circuit`: path to compiled circuit `.wasm` file (usually located at `./verify_js/` directory)
+- `--zkey`: path to prepared `.zkey` file
+- `--vkey`: path to exported verification key file (could be exported from `.zkey` file by using `snarkjs`)
 
 ## Run a test
 
