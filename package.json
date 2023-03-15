@@ -2,8 +2,9 @@
   "name": "public_verify_example",
   "version": "1.0.0",
   "description": "ECDSA signature verifier",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node ./src/app.js",
     "test": "NODE_OPTIONS=--max_old_space_size=4000 NODE_ENV=test nyc mocha",
     "lint": "eslint \"{src,bin}/**/*.js\"",
     "prettier": "prettier --write \"{src,test,bin,config}/**/*.{js,json,md,yml}\" \"*.{js,json,md,yml}\""

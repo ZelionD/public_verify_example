@@ -51,7 +51,7 @@ This example currently supports only Groth16 proving system.
 
 ## Run
 
-node ./src/index.js --message="%MESSAGE%" --gen-random-wallet --circuit %CIRCUIT_WASM_PATH% --zkey %ZKEY_PATH% --vkey %VERIFICATION_KEY_PATH%
+npm start -- --message="%MESSAGE%" --gen-random-wallet --circuit %CIRCUIT_WASM_PATH% --zkey %ZKEY_PATH% --vkey %VERIFICATION_KEY_PATH%
 
 where:
 
