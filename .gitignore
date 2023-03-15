@@ -9,6 +9,7 @@ verify_js/
 *.r1cs
 *.sym
 *.wtns
+verification_key.json
 
 ## File system
 .DS_Store

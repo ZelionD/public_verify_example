@@ -1,6 +1,41 @@
 const { ethers } = require("ethers")
 const secp = require("@noble/secp256k1")
 
+function parseArgs(rawArgs) {
+  const parsedArgs = {}
+  let currentArg = null
+
+  for (let i = 0; i < rawArgs.length; i += 1) {
+    const arg = rawArgs[i]
+
+    const match = arg.match(/--(\w+)(?:=(.*))?/)
+
+    if (match && match[2]) {
+      // parses argument=value
+      const [_, argName, argValue] = match // eslint-disable-line no-unused-vars
+      parsedArgs[argName] = argValue
+      currentArg = null
+    } else if (arg.startsWith("--")) {
+      if (currentArg) {
+        parsedArgs[currentArg] = true
+      }
+
+      // new argument
+      currentArg = arg.substring(2)
+    } else if (currentArg !== null) {
+      // add value to current argument
+      parsedArgs[currentArg] = arg
+      currentArg = null
+    }
+  }
+
+  if (currentArg) {
+    parsedArgs[currentArg] = true
+  }
+
+  return parsedArgs
+}
+
 function convertBigintToArray(n, k, x) {
   let mod = 1n
   for (let idx = 0; idx < n; idx += 1) {
@@ -47,4 +82,4 @@ function buildInput(signature, message, signerPubkey) {
   }
 }
 
-module.exports = { buildInput }
+module.exports = { parseArgs, buildInput }
